@@ -29,7 +29,7 @@ export class GoogleSpreadsheetService {
       }
       result[row.meal].push({
         dish: row.dish,
-        resipe: row.resipes,
+        recipe: row.resipes,
         photo: row.photo,
       });
     });

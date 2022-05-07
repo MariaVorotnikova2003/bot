@@ -66,7 +66,7 @@ async function start() {
         }
 
         await ctx.replyWithHTML(
-          `<b>${randomRecipe.dish}</b>\n${randomRecipe.resipe}`,
+          `<b>${randomRecipe.dish}</b>\n${randomRecipe.recipe}`,
           {
             disable_web_page_preview: preview,
           }
