@@ -4,7 +4,7 @@ export class GoogleSpreadsheetService {
   doc;
   constructor() {
     this.doc = new GoogleSpreadsheet(
-      process.env.SHEET_ID
+      process.env["SHEET_ID"]
     );
   }
   async Auth() {
@@ -22,6 +22,7 @@ export class GoogleSpreadsheetService {
     await sheet.loadCells(); // no filter - will load ALL cells in the sheet
     const rows = await sheet.getRows();
     const result = {};
+    
     rows.forEach((row) => {
       if (!result[row.meal]) {
         result[row.meal] = [];
